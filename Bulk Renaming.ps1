@@ -1,4 +1,4 @@
-﻿# PowerShell script to bulk rename all the files inside a folder
+﻿# PowerShell script to bulk rename all the files inside a folder or search for files that include any particular keyword in a Folder
 # To remove a particular characters from all files, paste the string in "Find" variable and keep "ReplaceWith" section blank and Vice versa.
 # Author : Anshul Agrawal
 
@@ -7,11 +7,11 @@
 $path = 'I:\Moviies'
 
 #Input Find and Replace keywords
-$Find = 'www.moviejockey.com'
+$Find = ' <-any search keyword-> '
 $replace = ""
 
-#If Replace operation to be performed
-$ifReplace = $true
+#If Replace operation to be performed ($true will perform Replace opration)
+$ifReplace = $false
 
 
 #Loop through all the files in a For Loop
@@ -49,7 +49,3 @@ Foreach($file in $SearchPath){
     #Else Continue
     }
 #End
-
-$filepath = $path + '\text.txt'
-$filepath = $null
-
